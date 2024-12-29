@@ -1,0 +1,41 @@
+/* @type {import('tailwindcss').Config} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    
+ 
+ }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* تعريف الحركات السلسة */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+/* تعريف التأثيرات */
+.hover-scale {
+  @apply transition-transform duration-300 hover:scale-105;
+}
